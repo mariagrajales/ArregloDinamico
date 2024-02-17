@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digimon</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="contain_botones">
+    <button id="btn-api">Cargar datos</button>
+    <select id="level">
+        <option value="">Todos los niveles</option>
+        <option value="Training">Training</option>
+        <option value="Rookie">Rookie</option>
+        <option value="Champion">Champion</option>
+        <option value="Ultimate">Ultimate</option>
+        <option value="Fresh">Fresh</option>
+        <option value="Mega">Mega</option>
+        <option value="In Training">In Training</option>
+        <option value="Armor">Armor</option>
+    </select>
+    <button id="btn-filter">Mostrar Digimon</button>
+</div>
+<div id="digimonContainer"></div>
+<div class="contain_pagination" id="pagination" style="display: none;">
+    <button id="btn-prev">Anterior</button>
+    <span id="pageNumber"></span>
+    <button id="btn-next">Siguiente</button>
+</div>
+<template id="digimonTemplate">
+    <div class="card">
+        <img src="" id="imagen" alt="">
+        <h2 id="nombre"></h2>
+        <p id="sta">Nivel: </p>
+    </div>
+</template>
+<script type="module" src="./src/controllers/index.js"></script>
+</body>
+</html>
